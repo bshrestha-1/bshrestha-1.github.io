@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bijay Shrestha</title>
+    <meta name="description" content="My portfolio">
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        undefined: {
+                            500: '#0ea5e9',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0f172a;
+            background-image: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+            color: #e2e8f0;
+        }
+
+        .gradient-text {
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            background-image: linear-gradient(90deg, #0ea5e9, #3b82f6);
+        }
+
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(14, 165, 233, 0.2);
+        }
+
+        ::selection {
+            background-color: rgba(14, 165, 233, 0.2);
+        }
+    </style>
+</head>
+
+<body class="antialiased">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-slate-800/80 backdrop-blur-md z-50 border-b border-slate-700">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <a href="#" class="flex items-center space-x-2">
+                    <span class="text-xl font-bold gradient-text">Bijay Shrestha</span>
+                </a>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#work" class="text-slate-300 hover:text-undefined-500 transition">Work</a>
+                    <a href="#publications" class="text-slate-300 hover:text-undefined-500 transition">Publications</a>
+                    <a href="#resume" class="text-slate-300 hover:text-undefined-500 transition">Resume</a>
+                </div>
+                <button class="md:hidden text-slate-300">
+                    <i data-feather="menu"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+    <!-- Hero Section -->
+    <section class="min-h-screen flex items-center pt-16 bg-gradient-to-b from-slate-900 to-transparent">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-6">
+                        Professor<span class="gradient-text">, Physicist, </span> Data Scientist
+                    </h1>
+
+                    <p class="text-lg text-slate-400 mb-8 max-w-lg">
+                        dedicated to discovery and student success through both research and teaching.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#work"
+                            class="px-6 py-3 bg-undefined-500 text-white rounded-lg font-medium hover:bg-undefined-600 transition shadow-lg shadow-undefined-500/20">
+                            View Work
+                        </a>
+                        <a href="#resume"
+                            class="px-6 py-3 border border-slate-600 text-slate-300 rounded-lg font-medium hover:bg-slate-800 transition">
+                            View Resume
+                        </a>
+                    </div>
+                </div>
+                <div class="relative">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-br from-undefined-100 to-undefined-300 rounded-3xl -rotate-6">
+                    </div>
+                    <img src="https://raw.githubusercontent.com/bshrestha-1/Resume-deposits/refs/heads/main/ChatGPT%20Image%20Apr%2018%2C%202025%2C%2009_25_40%20PM.png"
+                        alt="Digital workspace" class="relative rounded-3xl shadow-xl w-full h-auto">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Particle Collision Divider -->
+    <div class="relative py-20 overflow-hidden">
+        <div class="absolute inset-0 flex items-center justify-center">
+            <div class="w-full h-px bg-gradient-to-r from-transparent via-undefined-500/30 to-transparent"></div>
+        </div>
+        <div class="relative flex justify-center">
+            <div class="flex items-center space-x-35">
+                <!-- Proton 1 -->
+                <div class="relative">
+                    <div
+                        class="w-4 h-4 rounded-full bg-gradient-to-br from-red-500 to-red-700 shadow-lg shadow-red-500/30 animate-[moveLeft_3s_ease-in-out_infinite]">
+                    </div>
+                </div>
+
+                <!-- Collision Effect -->
+                <div class="relative">
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        <div class="w-24 h-2 bg-undefined-500/30 rounded-full animate-[pulse_1s_ease-in-out_infinite]">
+                        </div>
+                    </div>
+                    <div
+                        class="w-8 h-8 rounded-full bg-yellow-500 shadow-lg shadow-yellow-500/50 animate-[ping_1s_ease-out_infinite]">
+                    </div>
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        <div class="w-16 h-16 rounded-full bg-yellow-500/10 animate-[ping_1.5s_ease-out_infinite]">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Proton 2 -->
+                <div class="relative">
+                    <div
+                        class="w-4 h-4 rounded-full bg-gradient-to-br from-red-500 to-red-700 shadow-lg shadow-red-500/30 animate-[moveRight_3s_ease-in-out_infinite]">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <style>
+        @keyframes moveLeft {
+            0% {
+                transform: translateX(-100px);
+                opacity: 1;
+            }
+
+            50% {
+                transform: translateX(0);
+                opacity: 1;
+            }
+
+            51% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 0;
+            }
+        }
+
+        @keyframes moveRight {
+            0% {
+                transform: translateX(100px);
+                opacity: 1;
+            }
+
+            50% {
+                transform: translateX(0);
+                opacity: 1;
+            }
+
+            51% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 0;
+            }
+        }
+
+        @keyframes ping {
+            0% {
+                transform: scale(0.8);
+                opacity: 0.8;
+            }
+
+            70%,
+            100% {
+                transform: scale(1.4);
+                opacity: 0;
+            }
+        }
+    </style>
+    <!-- About Section -->
+    <section class="py-20">
+        <div class="max-w-10xl mx-auto px-400 sm:px-600 lg:px-100">
+            <div class="text-center mb-16">
+                <span id="greeting" class="gradient-text text-5xl font-bold">Hey!</span><br>
+            </div>
+
+            <script>
+                const greetings = [
+                    "Hello!",
+                    "Hola!",
+                    "Bonjour!",
+                    "Ciao!",
+                    "Hallo!",
+                    "こんにちは!",
+                    "안녕하세요!",
+                    "नमस्ते!",
+                    "你好!",
+                    "Здравствуйте!"
+                ];
+                let currentGreeting = 0;
+                const greetingElement = document.getElementById('greeting');
+
+                function rotateGreetings() {
+                    greetingElement.textContent = greetings[currentGreeting];
+                    currentGreeting = (currentGreeting + 1) % greetings.length;
+                }
+
+                // Initial call and set interval
+                rotateGreetings();
+                setInterval(rotateGreetings, 3000);
+            </script>
+            <div class="max-w-3xl mx-auto text-center">
+                <p class="text-lg text-slate-400 mb-8">
+                    I'm Bijay Shrestha, a physicist currently working on granular physics research while teaching.
+                    I love photography, data visualization, and exploring the intersection of science and art.
+                </p>
+                <div class="flex justify-center space-x-6">
+                    <a href="https://github.com/bshrestha-1" class="text-gray-500 hover:text-undefined-500 transition">
+                        <i data-feather="github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/bshrestha94/"
+                        class="text-gray-500 hover:text-undefined-500 transition">
+                        <i data-feather="linkedin"></i>
+                    </a>
+                    <a href="https://www.instagram.com/quantum_shutterbug"
+                        class="text-gray-500 hover:text-undefined-500 transition">
+                        <i data-feather="instagram"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Work Section -->
+    <section id="work" class="py-20 bg-slate-800/50 backdrop-blur-sm">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h3 class="text-3xl font-bold mb-4">Selected Projects</h3>
+                <p class="text-slate-400 max-w-2xl mx-auto">A curated selection of my recent weekend passion-projects
+                    across various disciplines. </p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="bg-slate-700 rounded-xl overflow-hidden shadow-md card-hover">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://raw.githubusercontent.com/bshrestha-1/Tableau_Works/refs/heads/main/Nepal_Climate_Analysis/Screenshot.png"
+                            alt="Project 1" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Tableau Dashboards</h3>
+                        <p class="text-slate-400 mb-4">Two of the many Tableau projects I've worked on.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-slate-600 text-slate-200 rounded-full text-sm">UI Design</span>
+                            <span class="px-3 py-1 bg-slate-600 text-slate-200 rounded-full text-sm">Tableau</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="bg-slate-700 rounded-xl overflow-hidden shadow-md card-hover">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://raw.githubusercontent.com/bshrestha-1/Labyrinth/refs/heads/main/just.png"
+                            alt="Project 2" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Labyrinyth</h3>
+                        <p class="text-slate-400 mb-4"> A digital prototype to test the gameplay mechanics of a new
+                            boardgame that I am working on.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-slate-600 text-slate-200 rounded-full text-sm">Python</span>
+                            <span class="px-3 py-1 bg-slate-600 text-slate-200 rounded-full text-sm">Pygame</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="bg-slate-700 rounded-xl overflow-hidden shadow-md card-hover">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://cdn.uconnectlabs.com/wp-content/uploads/sites/31/2017/01/linkedinforjobsearch.jpg"
+                            alt="Project 3" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Linkedin Job Recommendation</h3>
+                        <p class="text-slate-400 mb-4">Capstone project that leveraged web-scraped LinkedIn data to
+                            build a job recommendation algorithm tailored to users’ skills and preferences</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-slate-600 text-slate-200 rounded-full text-sm">TensorFlow</span>
+                            <span class="px-3 py-1 bg-slate-600 text-slate-200 rounded-full text-sm">Machine
+                                Learning</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-12">
+                <a href="https://github.com/bshrestha-1"
+                    class="inline-flex items-center text-undefined-500 font-medium group">
+                    View all projects
+                    <i data-feather="arrow-right" class="ml-2 w-5 h-5 group-hover:translate-x-1 transition"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+    <!-- Publications Section -->
+    <section id="publications" class="py-20">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4">Selected Publications</h2>
+                <p class="text-slate-400 max-w-2xl mx-auto">A selection of my academic publications</p>
+            </div>
+
+            <div class="space-y-6 max-w-3xl mx-auto">
+                <div class="bg-slate-800 rounded-xl p-6 shadow-lg hover:shadow-xl transition">
+                    <h3 class="text-xl font-bold mb-2">Role of asymmetric bolaamphiphilic character of VECAR on kinetic
+                        and structural aspects of self-assembled structures: A molecular dynamics simulation study</h3>
+                    <p class="text-slate-400 mb-2">Colloids and Surfaces A: Physicochemical and Engineering Aspects -
+                        Elsevier · Jan 1, 2017</p>
+                    <p class="text-slate-300 mb-4"> Computational Study of the potential of VECAR, a bolamphiphilic
+                        molecule with two hydrophilic heads (a Vitamin-E derivative and Carnosine) connected by a
+                        hydrophobic alkyl chain, for safe drug delivery.</p>
+                    <a href="https://www.sciencedirect.com/science/article/abs/pii/S0927775717303205"
+                        class="text-undefined-500 hover:underline inline-flex items-center">
+                        Read paper <i data-feather="arrow-right" class="ml-1 w-4 h-4"></i>
+                    </a>
+                </div>
+
+                <div class="bg-slate-800 rounded-xl p-6 shadow-lg hover:shadow-xl transition">
+                    <h3 class="text-xl font-bold mb-2">Configuration, Performance, and Commissioning of the ATLAS 𝒃-jet
+                        Triggers for the 2022 and 2023 LHC data-taking periods</h3>
+                    <p class="text-slate-400 mb-2">ATLAS Experiment</p>
+                    <p class="text-slate-300 mb-4">A detailed cost analysis of the CPU consumption for various b-jet
+                        trigger algorithms.</p>
+
+                </div>
+
+                <div class="bg-slate-800 rounded-xl p-6 shadow-lg hover:shadow-xl transition">
+                    <h3 class="text-xl font-bold mb-2">
+                        Measurements of the Higgs boson production cross2 section via ggF and VBF in 𝑯→ 𝑾𝑾∗→ ℓ𝝂ℓ𝝂
+                        with3 140 fb^−1 of data collected with the ATLAS detector4 at √𝒔 = 13 TeV</h3>
+                    <p class="text-slate-400 mb-2">ATLAS Experiment</p>
+                    <p class="text-slate-300 mb-4">A comprehensive legacy analysis of the Higgs boson using Run II data
+                        from 2015 and 2016 using Deep Neural Networks (DNNs)</p>
+
+                </div>
+            </div>
+
+            <div class="text-center mt-12">
+                <a href="https://scholar.google.com/citations?user=ouCr3h8AAAAJ&hl=en"
+                    class="inline-flex items-center px-6 py-3 border border-slate-600 text-slate-300 rounded-lg font-medium hover:bg-slate-800 transition">
+                    View All Publications on Google Scholar
+                    <i data-feather="external-link" class="ml-2 w-5 h-5"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resume Section -->
+    <section id="resume" class="py-20 bg-slate-800">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4">My Resume</h2>
+                <p class="text-slate-400 max-w-2xl mx-auto">Professional experience and academic background</p>
+            </div>
+            <div class="bg-slate-700 rounded-xl shadow-lg overflow-hidden">
+                <div class="md:flex">
+                    <div class="md:w-1/3 bg-slate-800 p-8">
+                        <div class="text-center mb-8">
+                            <img src="https://raw.githubusercontent.com/bshrestha-1/Resume-deposits/refs/heads/main/Resume_photo.jpg"
+                                alt="Profile" class="w-32 h-32 rounded-full mx-auto mb-4 shadow-md">
+                            <h3 class="text-xl font-bold">Bijay Shrestha</h3>
+                            <p class="text-slate-400">Physicist | Professor | Data Scientist</p>
+                        </div>
+
+                        <div class="mb-8">
+                            <h4 class="text-lg font-semibold mb-4 border-b pb-2">Contact</h4>
+                            <ul class="space-y-2">
+                                <li class="flex items-center">
+                                    <i data-feather="mail" class="w-5 h-5 mr-2 text-gray-500"></i>
+                                    <span>bskrb94@gmail.com</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <i data-feather="phone" class="w-5 h-5 mr-2 text-gray-500"></i>
+                                    <span>+1 (949) 579-0473</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <i data-feather="map-pin" class="w-5 h-5 mr-2 text-gray-500"></i>
+                                    <span>Charlotte, NC</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="mb-8">
+                            <h4 class="text-lg font-semibold mb-4 border-b pb-2">Education</h4>
+                            <div class="space-y-4">
+                                <div>
+                                    <h5 class="font-medium">PhD in Physics</h5>
+                                    <p class="text-sm text-slate-400">University of Oklahoma, 2024</p>
+                                </div>
+                                <div>
+                                    <h5 class="font-medium">BSc in Physics</h5>
+                                    <p class="text-sm text-slate-400">Southeastern Louisiana University, 2017</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="md:w-2/3 p-8">
+                        <div class="mb-8">
+                            <h4 class="text-lg font-semibold mb-4 border-b pb-2">Professional Experience</h4>
+                            <div class="space-y-6">
+                                <div>
+                                    <h5 class="font-bold">Visiting Assistant Professor of Physics</h5>
+                                    <p class="text-sm text-slate-400 mb-2">Catawba College | 2025 - Present</p>
+                                    <ul class="list-disc pl-5 text-slate-300 space-y-1">
+                                        <li>Designed and initiated a new granular convection research lab, while
+                                            supervising 2 undergraduate researchers.</li>
+                                        <li>Taught physics courses for over 50 students.</li>
+                                        <li>Expanded laboratory curriculum.</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h5 class="font-bold">Graduate and Postdoctoral Researcher</h5>
+                                    <p class="text-sm text-slate-400 mb-2">University of Oklahoma and CERN | 2017 - 2025
+                                    </p>
+                                    <ul class="list-disc pl-5 text-slate-300 space-y-1">
+                                        <li>Streamlined large-scale data analysis workflows for Run II and III Analysis
+                                            of Higgs Boson</li>
+                                        <li>Developed and integrated an automated CPU consumption analysis for b-jet
+                                            trigger algorithms</li>
+                                        <li>Implemented and trained Deep Neural Networks (DNN) models, resulting in a
+                                            13.7%
+                                            reduction of misidentified events.</li>
+                                        <li>Identified and resolved critical bugs in the HLT reconstruction code</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mb-8">
+                            <h4 class="text-lg font-semibold mb-4 border-b pb-2">Skills</h4>
+                            <div class="grid grid-cols-2 gap-4">
+                                <div>
+                                    <h5 class="font-medium mb-2">Technical</h5>
+                                    <ul class="space-y-1">
+                                        <li class="flex items-center">
+                                            <i data-feather="check" class="w-4 h-4 mr-2 text-green-500"></i>
+                                            <span>Python</span>
+                                        </li>
+                                        <li class="flex items-center">
+                                            <i data-feather="check" class="w-4 h-4 mr-2 text-green-500"></i>
+                                            <span>Machine Learning</span>
+                                        </li>
+                                        <li class="flex items-center">
+                                            <i data-feather="check" class="w-4 h-4 mr-2 text-green-500"></i>
+                                            <span>Statistical Modeling</span>
+                                        </li>
+                                        <li class="flex items-center">
+                                            <i data-feather="check" class="w-4 h-4 mr-2 text-green-500"></i>
+                                            <span>Experimental Setup & Design</span>
+                                        </li>
+                                        </li>
+                                        <li class="flex items-center">
+                                            <i data-feather="check" class="w-4 h-4 mr-2 text-green-500"></i>
+                                            <span>Arduino</span>
+                                        </li>
+                                        </li>
+                                        <li class="flex items-center">
+                                            <i data-feather="check" class="w-4 h-4 mr-2 text-green-500"></i>
+                                            <span>SQL</span>
+                                        </li>
+                                        </li>
+                                        <li class="flex items-center">
+                                            <i data-feather="check" class="w-4 h-4 mr-2 text-green-500"></i>
+                                            <span>Tableau</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h5 class="font-medium mb-2">Teaching</h5>
+                                    <ul class="space-y-1">
+                                        <li class="flex items-center">
+                                            <i data-feather="check" class="w-4 h-4 mr-2 text-green-500"></i>
+                                            <span>Curriculum Development</span>
+                                        </li>
+                                        <li class="flex items-center">
+                                            <i data-feather="check" class="w-4 h-4 mr-2 text-green-500"></i>
+                                            <span>Student Mentoring</span>
+                                        </li>
+                                        <li class="flex items-center">
+                                            <i data-feather="check" class="w-4 h-4 mr-2 text-green-500"></i>
+                                            <span>Research Supervision</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="text-center">
+                            <a href="https://github.com/bshrestha-1/Resume-deposits/blob/main/Bijay_Shrestha_CV_teaching_main-1.pdf"
+                                class="inline-flex items-center px-6 py-3 bg-undefined-500 text-white rounded-lg font-medium hover:bg-undefined-600 transition shadow-lg shadow-undefined-500/20">
+                                <i data-feather="download" class="w-5 h-5 mr-2"></i>
+                                Download Full CV
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="py-12 border-t border-slate-700">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <a href="#" class="flex items-center space-x-2">
+                        <span class="text-xl font-bold gradient-text">Bijay Shrestha</span>
+                    </a>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="https://github.com/bshrestha-1" class="text-gray-500 hover:text-undefined-500 transition">
+                        <i data-feather="github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/bshrestha94/"
+                        class="text-gray-500 hover:text-undefined-500 transition">
+                        <i data-feather="linkedin"></i>
+                    </a>
+                    <a href="https://www.instagram.com/quantum_shutterbug"
+                        class="text-gray-500 hover:text-undefined-500 transition">
+                        <i data-feather="instagram"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="mt-8 pt-8 border-t border-slate-700 text-center text-slate-400">
+                <p class="mb-4">Have a project in mind or want to collaborate? I'd love to hear from you.</p>
+                <a href="mailto:bskrb94@gmail.com" class="text-undefined-500 hover:underline">bskrb94@gmail.com</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        feather.replace();
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
